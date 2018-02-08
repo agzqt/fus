@@ -1,5 +1,13 @@
 package kr.co.fus.customer.service;
 
-public class CustomerReserveServiceImpl {
+import org.springframework.stereotype.Service;
 
+import kr.co.fus.customer.dao.CustomerReserveDao;
+
+@Service
+public class CustomerReserveServiceImpl implements CustomerReserveService{
+	private CustomerReserveDao dao;
+	public void setCustomerReserveDao(CustomerReserveDao customerReserveDao) {
+		this.dao = customerReserveDao;
+	}
 }

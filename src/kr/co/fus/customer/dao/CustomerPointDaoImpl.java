@@ -1,5 +1,14 @@
 package kr.co.fus.customer.dao;
 
-public class CustomerPointDaoImpl {
+import javax.annotation.Resource;
 
+import org.apache.ibatis.session.SqlSession;
+
+@Resource
+public class CustomerPointDaoImpl  implements CustomerPointDao {
+	private SqlSession sqlSession;
+	
+	public void setSqlSession(SqlSession sqlSession) {
+		this.sqlSession = sqlSession;
+	}
 }
