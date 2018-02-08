@@ -1,6 +1,6 @@
 package kr.co.fus.superadmin.bean;
 
-public class SuperAdminAdminInfoBean {
+public class SuperAdminInfoBean {
 public String AdminInfoId;
 public String AdminInfoPassword;
 public String AdminInfoPassword2;

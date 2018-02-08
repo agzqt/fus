@@ -5,6 +5,19 @@
 
 <configuration>
 	<typeAliases>		
-		<typeAlias alias="Test" type="kr.co.fus.customer.bean.CustomerInfoBean" />
+		<typeAlias alias="CustomerInfoBean" type="kr.co.fus.customer.bean.CustomerInfoBean" />
+		<typeAlias alias="CustomerGradeBean" type="kr.co.fus.customer.bean.CustomerGradeBean" />
+		<typeAlias alias="CustomerPointBean" type="kr.co.fus.customer.bean.CustomerPointBean" />
+		<typeAlias alias="CustomerReserveBean" type="kr.co.fus.customer.bean.CustomerReserveBean" />
+		<typeAlias alias="CustomerReviewBean" type="kr.co.fus.customer.bean.CustomerReviewBean" />
+		<typeAlias alias="PosInfoBean" type="kr.co.fus.pos.bean.PosInfoBean" />
+		<typeAlias alias="PosOrderBean" type="kr.co.fus.pos.bean.PosOrderBean" />
+		<typeAlias alias="PosSeatBean" type="kr.co.fus.pos.bean.PosSeatBean" />
+		<typeAlias alias="StoreEventBean" type="kr.co.fus.store.bean.StoreEventBean" />
+		<typeAlias alias="StoreInfoBean" type="kr.co.fus.store.bean.StoreInfoBean" />
+		<typeAlias alias="StoreMenuBean" type="kr.co.fus.store.bean.StoreMenuBean" />
+		<typeAlias alias="CustomerHelpBean" type="kr.co.fus.superadmin.bean.CustomerHelpBean" />
+		<typeAlias alias="SuperAdminInfoBean" type="kr.co.fus.superadmin.bean.SuperAdminInfoBean" />
+		<typeAlias alias="StoreHelpBean" type="kr.co.fus.superadmin.bean.StoreHelpBean" />
 	</typeAliases>
 </configuration>
