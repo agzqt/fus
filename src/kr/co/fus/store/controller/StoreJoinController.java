@@ -18,7 +18,7 @@ public class StoreJoinController {
 		this.storeJoinDao = storeJoinDao;
 	}
 	
-	@RequestMapping(value = "/storejoin.store", method = RequestMethod.GET)
+	/*@RequestMapping(value = "/storejoin.store", method = RequestMethod.GET)
 	protected ModelAndView handleRequestInternal(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
 		System.out.println("실행됨.[GET방식]");
@@ -45,7 +45,7 @@ public class StoreJoinController {
 		String max = arg0.getParameter("max");
 		String info = arg0.getParameter("info");
 
-		/*StoreJoinDao bean = new StoreJoinDao();
+		StoreJoinDao bean = new StoreJoinDao();
 		bean.setStoreInfoCode(code);
 		bean.setStoreInfoId(id);
 		bean.setStoreInfoPassword(pwd);
@@ -61,9 +61,9 @@ public class StoreJoinController {
 		bean.setStoreInfoMax(max);
 		bean.setStoreInfoInfo(info);
 
-		storeJoinDao.insert(bean);*/
+		storeJoinDao.insert(bean);
 
 		System.out.printf("%s, %s, %s, %s\n", id, pwd, name);
 		return new ModelAndView("login");
-	}
+	}*/
 }

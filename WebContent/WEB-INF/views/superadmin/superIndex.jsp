@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>페이지를 찾을수없습니다</title>
+<title>FUS 관리자</title>
 </head>
 <body>
-	<h1>페이지를 찾을수가 업성요 멍충아</h1>
+	하하호호재밌는얘기
 </body>
 </html>
