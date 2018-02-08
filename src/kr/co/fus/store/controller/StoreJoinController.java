@@ -26,8 +26,10 @@ public class StoreJoinController {
 	}
 
 	@RequestMapping(value = "/storejoin.store", method = RequestMethod.POST)
+	
 	protected ModelAndView handleRequestInternal2(HttpServletRequest arg0,
 			HttpServletResponse arg1) throws Exception {
+		
 
 		System.out.println("실행됨.[POST방식]");
 		String code = arg0.getParameter("code");
