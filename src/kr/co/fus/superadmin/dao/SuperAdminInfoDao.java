@@ -1,5 +1,7 @@
 package kr.co.fus.superadmin.dao;
 
+import kr.co.fus.superadmin.bean.SuperAdminInfoBean;
+
 public interface SuperAdminInfoDao {
-	public String test();
+	public SuperAdminInfoBean login(String superId);
 }

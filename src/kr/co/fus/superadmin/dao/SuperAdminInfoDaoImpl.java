@@ -1,10 +1,9 @@
 package kr.co.fus.superadmin.dao;
 
-import javax.annotation.Resource;
-
 import org.apache.ibatis.session.SqlSession;
 
-@Resource
+import kr.co.fus.superadmin.bean.SuperAdminInfoBean;
+
 public class SuperAdminInfoDaoImpl implements SuperAdminInfoDao {
 	private SqlSession sqlSession;
 	
@@ -13,7 +12,7 @@ public class SuperAdminInfoDaoImpl implements SuperAdminInfoDao {
 	}
 	
 	@Override
-	public String test() {
-		return sqlSession.selectOne("test");
+	public SuperAdminInfoBean login(String superid) {
+		return sqlSession.selectOne("superlogin", superid);
 	}
 }

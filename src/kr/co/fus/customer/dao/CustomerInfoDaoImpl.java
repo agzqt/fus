@@ -4,6 +4,8 @@ import javax.annotation.Resource;
 
 import org.apache.ibatis.session.SqlSession;
 
+import kr.co.fus.superadmin.bean.SuperAdminInfoBean;
+
 @Resource
 public class CustomerInfoDaoImpl implements CustomerInfoDao {
 	private SqlSession sqlSession;
@@ -13,7 +15,7 @@ public class CustomerInfoDaoImpl implements CustomerInfoDao {
 	}
 	
 	@Override
-	public String test() {
-		return sqlSession.selectOne("test");
+	public String login(String cusid) {
+		return sqlSession.selectOne("cuslogin", cusid);
 	}
 }
