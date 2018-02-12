@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/security 
+	http://www.springframework.org/schema/security/spring-security-4.2.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-4.2.xsd">
+    
+    <!-- 검사 URL -->
+    <http use-expressions="true" auto-config="true">
+        <intercept-url pattern="/loginform.cus" access="permitAll" />
+        <intercept-url pattern="/index.cus" access="permitAll" />
+        <intercept-url pattern="/**" access="hasAnyRole('USER')" />
+        
+        <form-login login-page="/loginform.cus"
+                    default-target-url="/index.cus"
+                    authentication-failure-url="/loginform.cus"
+                    username-parameter="cusid"
+                    password-parameter="cuspw" />
+        <logout logout-url="/logout.cus"
+                logout-success-url="/index.cus" />
+                
+        <access-denied-handler error-page="/accessDenied.cus" />
+    </http>
+    
+    <beans:bean id="userDetailsService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+        <beans:property name="dataSource" ref="dataSource"/>
+    </beans:bean>
+    
+    <!--  provider  -->
+    <authentication-manager>
+        <authentication-provider>
+        <jdbc-user-service 
+            data-source-ref="dataSource"
+            role-prefix=""
+            users-by-username-query="select CUSTOMERINFOID, CUSTOMERINFOPASSWORD from customerinfo where CUSTOMERINFOID = ?"
+            authorities-by-username-query="select CUSTOMERINFOID, CUSTOMERAUTHORITIES from customerinfo where CUSTOMERINFOID = ?"
+            />
+        </authentication-provider>
+    </authentication-manager>
+   
+</beans:beans>

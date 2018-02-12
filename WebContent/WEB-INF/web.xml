@@ -13,7 +13,8 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			/WEB-INF/spring/root-context.xml
-			<!-- /WEB-INF/spring/security-context.xml -->
+			<!-- /WEB-INF/spring/admin-security.xml -->
+			/WEB-INF/spring/customer-security.xml
 		</param-value>
 	</context-param>
 	
@@ -86,7 +87,7 @@
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-<!-- 
+
 	<filter>
    		<filter-name>springSecurityFilterChain</filter-name>
     	<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
@@ -94,7 +95,7 @@
   	<filter-mapping>
     	<filter-name>springSecurityFilterChain</filter-name>
     	<url-pattern>/*</url-pattern>
-  	</filter-mapping> -->
+  	</filter-mapping>
   
   	<error-page>
 	    <error-code>404</error-code>

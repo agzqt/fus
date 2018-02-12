@@ -10,7 +10,7 @@
 <body>
 좋아좋아신나는친구<h1>로그인</h1>
 	<c:if test="${id==null}">
-		<form action="./login.cus" method="post">
+		<form action="./login.cus">
 			<input type="text" name="cusid" placeholder="name" required="required">
 			<input type="password" name="cuspw" placeholder="pass" required="required">
 			<input type="submit" value="로그인">

@@ -10,7 +10,7 @@
 <body>
 	하하호호재밌는얘기<h1>로그인</h1>
 	<c:if test="${id==null}">
-		<form action="./login.super">
+		<form action="./login.super" method="post">
 			<input type="text" name="superid" placeholder="name" required="required">
 			<input type="password" name="superpw" placeholder="pass" required="required">
 			<input type="password" name="superpw2" placeholder="pass2" required="required">

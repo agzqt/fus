@@ -36,4 +36,5 @@ public class CustomerInfoController {
 		session.invalidate();
 		return "redirect:../CustomerIndex";
 	}
+	
 }
