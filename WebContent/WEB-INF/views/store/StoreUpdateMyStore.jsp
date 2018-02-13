@@ -11,10 +11,10 @@
 	<h1>점포 정보</h1>
 <form method="post" action="stomystore.sto">
 	<div>
-		<label >아이디</label><label>${member.id }</label>
+		<label >사장님 아이디</label><label>${storeinfo.storeInfoId }</label>
 	</div>
 	<div>
-		<label >이름</label><label>${member.name }</label>
+		<label >사장님 주소</label><label>${member.name }</label>
 	</div>
 	<div>
 		<label >이메일</label><label>${member.email }</label>

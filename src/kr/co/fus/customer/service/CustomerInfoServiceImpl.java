@@ -1,11 +1,13 @@
 package kr.co.fus.customer.service;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Service;
 
+import kr.co.fus.customer.bean.CustomerInfoBean;
 import kr.co.fus.customer.dao.CustomerInfoDao;
-import kr.co.fus.superadmin.bean.SuperAdminInfoBean;
 
 @Service
 public class CustomerInfoServiceImpl implements CustomerInfoService{
@@ -29,4 +31,26 @@ public class CustomerInfoServiceImpl implements CustomerInfoService{
 			}
 		} 
 	}
+	
+	@Override
+	public void insertMember(CustomerInfoBean customerInfoBean) {
+
+		dao.insertMember(customerInfoBean);
+	}
+	
+
+	@Override
+	public List<CustomerInfoBean> customerGetList(CustomerInfoBean customerInfoBean) {
+		
+		return dao.customerGetList(customerInfoBean);
+	}
+	
+	@Override
+	public int duplCheck(String customerInfoId) {
+		
+		return dao.customerDuplCheck(customerInfoId);
+	}
+	
+	
+	 
 }

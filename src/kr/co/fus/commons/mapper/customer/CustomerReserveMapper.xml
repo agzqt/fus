@@ -3,7 +3,10 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.fus.customer.dao.CustomerReserveDao">
-	<select id="testaa" resultType="String">
-		select * from ex
+	<insert id="CustomerReserveInsert" parameterType="CustomerReserveBean">
+	insert into customerreserve values(0, #{customerReserveCode},#{customerReserveCustomerNum},#{customerReservePersonnal},#{customerReserveDate},#{customerReserveTime},#{customerReserveMemo},'1')
+	</insert>
+	<select id="CustomerReserveList" parameterType="String" resultType="CustomerReserveBean">
+		select * from customerreserve where CUSTOMERRESERVECUSTOMERNUM = #{userId}
 	</select>
 </mapper>

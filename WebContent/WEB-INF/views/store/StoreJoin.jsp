@@ -5,107 +5,169 @@
 <head>
 <meta charset="UTF-8">
 <title>사장님회원가입</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Staple Food Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="./resources/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+<link href="./resources/css/style.css" type="text/css" rel="stylesheet" media="all">  
+<link href="./resources/css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons --> 
+<!-- //Custom Theme files --> 
+<!-- js -->
+<script src="./resources/js/jquery-2.2.3.min.js"></script>  
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+<script>
+    function sample6_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+                // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+                // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+                var fullAddr = ''; // 최종 주소 변수
+                var extraAddr = ''; // 조합형 주소 변수
+
+                // 사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+                if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+                    fullAddr = data.roadAddress;
+
+                } else { // 사용자가 지번 주소를 선택했을 경우(J)
+                    fullAddr = data.jibunAddress;
+                }
+
+                // 사용자가 선택한 주소가 도로명 타입일때 조합한다.
+                if(data.userSelectedType === 'R'){
+                    //법정동명이 있을 경우 추가한다.
+                    if(data.bname !== ''){
+                        extraAddr += data.bname;
+                    }
+                    // 건물명이 있을 경우 추가한다.
+                    if(data.buildingName !== ''){
+                        extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+                    }
+                    // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
+                    fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
+                }
+
+                // 우편번호와 주소 정보를 해당 필드에 넣는다.
+                document.getElementById('sample6_postcode').value = data.zonecode; //5자리 새우편번호 사용
+                document.getElementById('sample6_address').value = fullAddr;
+
+                // 커서를 상세주소 필드로 이동한다.
+                document.getElementById('sample6_address2').focus();
+            }
+        }).open();
+    }
+</script>
+<!-- //js -->
+<!-- web-fonts -->   
+<link href="//fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
+<link href="//fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900" rel="stylesheet">
+<!-- //web-fonts -->
 </head>
 <body>
-	<div align="center">
-		<h1>회원 가입</h1>
-		<form method="post" action="stojoin.sto">
+	
+	<!-- sign up-page -->
+		<div class="login-page about">
+		<img class="login-w3img" src="./resources/images/img3.jpg" alt="">
+		<div class="container"> 
+			<h3 class="w3ls-title w3ls-title1">Sign Up to your account</h3>  
+			<div class="login-agileinfo"> 
+				<form method="post" action="./storejoinaction.sto">
+					
+					<input class="agile-ltext" type="text" name="storeInfoId" placeholder="ID를 입력해주세요." required="required" >
+					<input class="agile-ltext" type="password" name="storeInfoPassword" placeholder="비밀번호를 입력해주세요." required="required">
+					<input class="agile-ltext" type="password" name="Confirm Password" placeholder="비밀번호를 다시 입력해주세요." required="required">
+					<input class="agile-ltext" type="text" name="storeInfoName" placeholder="점포명 입력해주세요." required="required">					
+					
+				<input type="text" id="sample6_postcode" name="storeInfoAddress" placeholder="우편번호">
+<input type="button" onclick="sample6_execDaumPostcode()"  name="storeInfoAddress" value="우편번호 찾기"><br>
+<input type="text" id="sample6_address"  name="storeInfoAddress" placeholder="주소">
+<input type="text" id="sample6_address2"  name="storeInfoAddress" placeholder="상세주소">
 
-
-			<div class="form-group">
-				<label for="code">업소코드</label> <select class="form-control"
-					id="code">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
+					<input class="agile-ltext" type="text" name="storeInfoStorePhone" placeholder="점포전화번호를 입력해주세요." required="required">
+					<input class="agile-ltext" type="text" name="storeInfoMobilePhone" placeholder="사장님전화번호를 입력해주세요." required="required">
+					
+				<div class="agile-ltext">
+								<label for="selector1" class="col-sm-2 control-label">점포 분류</label>
+								<div class="col-sm-8"><select name="storeInfoCategory" id="selector1" class="form-control1">
+									<option>Lorem ipsum dolor sit amet.</option>
+									<option>Dolore, ab unde modi est!</option>
+									<option>Illum, fuga minus sit eaque.</option>
+									<option>Consequatur ducimus maiores voluptatum minima.</option>
+								</select></div>
+							</div>
+					
+					<input class="agile-ltext" type="text" name="storeInfoLicense" placeholder="사업자번호를 입력해주세요." required="required">	
+					<input class="agile-ltext" type="time" name="storeInfoOpen" placeholder="오픈시간" required="required">
+					<input class="agile-ltext" type="time" name="storeInfoClose" placeholder="마감시간" required="required">
+					<select class="agile-ltext"
+							name="storeInfoMaxSeat">
+							<option>최대예약가능인원</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+						</select> 
+					<input class="agile-ltext" type="text" name="storeInfoInfo" placeholder="매장정보(간단히)를 입력해주세요." required="required">
+					<input type="submit" value="입점신청">
+				</form>
 			</div>
-			<div class="form-group">
-				<label>아이디</label>
-				<!-- BoardDto 클래스의 필드랑 맵핑하기위해 name을 필드랑 동일하게작성 -->
-				<label><input type="text" name="StoreInfoId" /></label>
-			</div>
-			<div class="form-group">
-				<label>패스워드</label> <label><input type="password" name="pwd" /></label>
-			</div>
-			<div class="form-group">
-				<label>업소 명</label> <label><input type="text" name="name" /></label>
-			</div>
-			<div class="form-group">
-				<label>업소 주소</label> <label><input type="text" name="addr" /></label>
-			</div>
-			<div class="form-group">
-				<label>업소 전화번호</label> <label><input type="text"
-					name="phone" /></label>
-			</div>
-			<div class="form-group">
-				<label>사장님 전화번호</label> <label><input type="text"
-					name="mobile" /></label>
-			</div>
-			<div class="form-group">
-				<label for="cate">분류</label> <select class="form-control"
-					id="cate">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label>사업자번호</label> <label><input type="text"
-					name="license" /></label>
-			</div>
-			<div class="form-group">
-				<label for="open">오픈시간</label> <select class="form-control"
-					id="open">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label for="close">마감시간</label> <select class="form-control"
-					id="close">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
-			<div class="form-group">
-				<label>분위기</label> <label class="checkbox-inline"><input
-					type="checkbox" value="">Option 1</label> <label
-					class="checkbox-inline"><input type="checkbox" value="">Option
-					2</label> <label class="checkbox-inline"><input type="checkbox"
-					value="">Option 3</label>
-			</div>
-
-
-			<div class="form-group">
-				<label for="max">최대예약가능인원</label> <select class="form-control"
-					id="max">
-					<option>1</option>
-					<option>2</option>
-					<option>3</option>
-					<option>4</option>
-				</select>
-			</div>
-
-
-			<div class="form-group">
-				<label for="info">매장정보(간단히)</label>
-				<textarea class="form-control" rows="5" id="info"></textarea>
-			</div>
-			<div class="form-group">
-				<label> <input type="submit" value="입점신청"> <input
-					type="button" value="인덱스"
-					onclick="location.href='Storeindex.jsp'" />
-				</label>
-			</div>
-
-		</form>
+		</div>
 	</div>
+	<!-- subscribe -->
+	<!-- cart-js -->
+	<script src="./resources/js/minicart.js"></script>
+	<script>
+        w3ls.render();
+
+        w3ls.cart.on('w3sb_checkout', function (evt) {
+        	var items, len, i;
+
+        	if (this.subtotal() > 0) {
+        		items = this.items();
+
+        		for (i = 0, len = items.length; i < len; i++) { 
+        		}
+        	}
+        });
+    </script>  
+	<!-- //cart-js -->	
+	<!-- start-smooth-scrolling -->
+	<script src="./resources/js/SmoothScroll.min.js"></script>  
+	<script type="text/javascript" src="./resources/js/move-top.js"></script>
+	<script type="text/javascript" src="./resources/js/easing.js"></script>	
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!-- //end-smooth-scrolling -->	  
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up --> 
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./resources/js/bootstrap.js"></script>
 </body>
 </html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.fus.store.dao.StoreInfoDao">
+	<select id="StoreCheckId" parameterType="StoreInfoBean" resultType="java.lang.Integer">
+    SELECT NVL(COUNT(*),0)
+    FROM STOREINFO WHERE storeInfoId=#{storeInfoId}
+</select>
+	
+	<insert id="storeInsert" parameterType="StoreInfoBean">
+		insert into STOREINFO(
+		storeInfoId, storeInfoName, storeInfoPassword, storeInfoAddress, 
+		storeInfoStorePhone, storeInfoMobilePhone, storeInfoCategory, storeInfoLicense, 
+		storeInfoOpen, storeInfoClose, storeInfoIsOpen, storeInfoDate, storeInfoMaxSeat, 
+		storeInfoInfo, storeInfoDropDate) 
+		values(#{storeInfoId}, #{storeInfoName}, #{storeInfoPassword}, 
+		#{storeInfoAddress}, #{storeInfoStorePhone}, #{storeInfoMobilePhone}, #{storeInfoCategory}, 
+		#{storeInfoLicense}, #{storeInfoOpen}, #{storeInfoClose}, #{storeInfoIsOpen}, now(), 
+		#{storeInfoMaxSeat}, #{storeInfoInfo}, now())
+	</insert>
+	
+		<select id="storeLoginAction" resultType="String">
+		select storeInfoPassword from storeInfo where storeInfoId = #{storeInfoId}
+	</select>
+	
+	<select id="storelogin" resultType="StoreInfoBean">
+		select storeinfopassword from storeinfo where StoreInfoId = #{StoreInfoId}
+	</select>
+</mapper>

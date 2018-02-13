@@ -3,15 +3,20 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.co.fus.customer.dao.CustomerInfoDao">
-	<select id="test12112" resultType="String">
-		select * from ex
-	</select>
-	
-	 <insert id="insertMember" parameterType="CustomerInfoBean">
- 	insert into customerinfo values( 1,'intoid','0','kimsidldl','010-555-5555','emailsgs',1,0,0,'1111-12-12','1111-11-11',0,0,0)
- 	</insert>
- 	
 	<select id="cuslogin" resultType="String">
 		select customerinfopassword from customerinfo where customerinfoid = #{cusid}
 	</select>
+	
+	 <insert id="customerInsertMember" parameterType="CustomerInfoBean">
+		insert into customerinfo values(#{customerInfoNum},#{customerInfoId},#{customerInfoPassword},#{customerInfoName},#{customerInfoPhone},#{customerInfoEmail},#{customerInfoGrade},#{customerInfoCurrentPoint},#{customerInfoTotalPoint},now(),now())
+ 	</insert>
+ 	
+ 	<select id="customerList" resultType="CustomerInfoBean">
+		select * from customerinfo
+	</select>
+	
+	<!-- <select id="selectListDuplCheck" resultType="customerInfoId">
+	SELECT storeInfoId FROM storeinfo=#{storeinfo} UNION ALL SELECT customerInfoId=#{customerInfoId} FROM customerinfo;
+	</select>  -->
+	
 </mapper>
