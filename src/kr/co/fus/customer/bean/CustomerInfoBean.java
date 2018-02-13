@@ -14,6 +14,7 @@ public class CustomerInfoBean {
 	public int customerInfoTotalPoint;
 	public Date customerInfoDate;
 	public Date customerInfoDropDate;
+	public String customerAuthoritles;
 	public int getCustomerInfoNum() {
 		return customerInfoNum;
 	}
@@ -56,11 +57,11 @@ public class CustomerInfoBean {
 	public void setCustomerInfoGrade(int customerInfoGrade) {
 		this.customerInfoGrade = customerInfoGrade;
 	}
-	public int getCustomerInfocurrentPoint() {
+	public int getCustomerInfoCurrentPoint() {
 		return customerInfoCurrentPoint;
 	}
-	public void setCustomerInfocurrentPoint(int customerInfocurrentPoint) {
-		this.customerInfoCurrentPoint = customerInfocurrentPoint;
+	public void setCustomerInfoCurrentPoint(int customerInfoCurrentPoint) {
+		this.customerInfoCurrentPoint = customerInfoCurrentPoint;
 	}
 	public int getCustomerInfoTotalPoint() {
 		return customerInfoTotalPoint;
@@ -80,7 +81,11 @@ public class CustomerInfoBean {
 	public void setCustomerInfoDropDate(Date customerInfoDropDate) {
 		this.customerInfoDropDate = customerInfoDropDate;
 	}
+	public String getCustomerAuthoritles() {
+		return customerAuthoritles;
+	}
+	public void setCustomerAuthoritles(String customerAuthoritles) {
+		this.customerAuthoritles = customerAuthoritles;
+	}
 	
-	
-
 }

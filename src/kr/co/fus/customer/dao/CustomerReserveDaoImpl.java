@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import kr.co.fus.customer.bean.CustomerReserveBean;
 
-@Resource
+
 public class CustomerReserveDaoImpl  implements CustomerReserveDao {
 	private SqlSession sqlSession;
 	

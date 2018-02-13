@@ -18,13 +18,13 @@ import kr.co.fus.customer.service.CustomerReserveService;
 
 @Controller
 public class CustomerReserveController {
+	
 	@Autowired
 	CustomerReserveService customerReserveService;
 	
-	
 	@RequestMapping(value = "/reserve.cus", method = RequestMethod.GET)
 	public String reservePage(HttpServletRequest req, Locale locale, Model model) {
-		return "./CustomerReserve";
+		return "customer/CustomerReserve";
 	}
 	@RequestMapping(value = "/reserve.cus", method = RequestMethod.POST)
 	public String reserveCreate(HttpServletRequest req, Locale locale, Model model, @ModelAttribute CustomerReserveBean customerReserveBean) {
@@ -36,6 +36,7 @@ public class CustomerReserveController {
 		session.setAttribute("userId", "1");
 		ArrayList<CustomerReserveBean> reserveList = customerReserveService.reserveList((String)session.getAttribute("userId"));
 		model.addAttribute("reserveList" , reserveList);
-		return "./mypage/CustomerReserveList";
+		return "customer/mypage/CustomerReserveList";
 	}
+	
 }

@@ -17,147 +17,17 @@
 <link rel="stylesheet" href="resources/css/owl.carousel.css" type="text/css" media="all"/> <!-- Owl-Carousel-CSS -->
 <!-- //Custom Theme files --> 
 <!-- js -->
-<script src="js/jquery-2.2.3.min.js"></script>  
+<script src="resources/js/jquery-2.2.3.min.js"></script>  
 <!-- //js -->
 <!-- web-fonts -->   
-<link href="//fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
-<link href="//fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Berkshire+Swash" rel="stylesheet"> 
+<link href="http://fonts.googleapis.com/css?family=Yantramanav:100,300,400,500,700,900" rel="stylesheet">
 <!-- //web-fonts -->
 </head>
 <body>
-<!-- banner -->
-	<div class="banner">
-		<!-- header -->
-		<div class="header">
-			<div class="w3ls-header"><!-- header-one --> 
-				<div class="container">
-					<div class="w3ls-header-left">
-						<p>Free home delivery at your doorstep For Above $30</p>
-					</div>
-					<div class="w3ls-header-right">
-						<ul> 
-							<li class="head-dpdn">
-								<i class="fa fa-phone" aria-hidden="true"></i> Call us: +01 222 33345 
-							</li> 
-							<li class="head-dpdn">
-								<a href="./loginform.cus"><i class="fa fa-sign-in" aria-hidden="true"></i> 로그인</a>
-							</li> 
-							<li class="head-dpdn">
-								<a href="./CustomerInfoJoin.cus"><i class="fa fa-user-plus" aria-hidden="true"></i> 회원가입</a>
-							</li> 
-							<li class="head-dpdn">
-								<a href="./storejoin.sto"><i class="fa fa-user-plus" aria-hidden="true"></i> 사장님 사이트</a>
-							</li> 
-							<li class="head-dpdn">
-								<a href="help.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
-							</li>
-						</ul>
-					</div>
-					<div class="clearfix"> </div> 
-				</div>
-			</div>
-
-			<!-- //header-one -->    
-			<!-- navigation -->
-			<div class="navigation agiletop-nav">
-				<div class="container">
-					<nav class="navbar navbar-default">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<div class="navbar-header w3l_logo">
-							<button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>  
-							<h1><a href="index.html">Staple<span>Best Food Collection</span></a></h1>
-						</div> 
-						<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
-							<ul class="nav navbar-nav navbar-right">
-								<li><a href="index.html" class="active">Home</a></li>	
-								<!-- Mega Menu -->
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu <b class="caret"></b></a>
-									<ul class="dropdown-menu multi-column columns-3">
-										<div class="row">
-											<div class="col-sm-4">
-												<ul class="multi-column-dropdown">
-													<h6>Food type</h6>  
-													<li><a href="menu.html">Breakfast</a></li> 
-													<li><a href="menu.html">Lunch</a></li> 
-													<li><a href="menu.html">Dinner</a></li> 
-												</ul>
-											</div>
-											<div class="col-sm-4">
-												<ul class="multi-column-dropdown">
-													<h6>Cuisine</h6> 
-													<li><a href="menu.html">Indian Recipes</a></li> 
-													<li><a href="menu.html">American Recipes</a></li> 
-													<li><a href="menu.html">French Recipes</a></li> 
-													<li><a href="menu.html">Italian Recipes</a></li> 
-												</ul>
-											</div>
-											<div class="col-sm-4">
-												<ul class="multi-column-dropdown">
-													<h6>Box type</h6> 
-													<li><a href="menu.html">Diet</a></li> 
-													<li><a href="menu.html">Mini</a></li> 
-													<li><a href="menu.html">Regular</a></li> 
-													<li><a href="menu.html">Special</a></li> 
-												</ul>
-											</div> 
-											<div class="clearfix"></div>
-										</div>
-									</ul>
-								</li>
-								<li><a href="about.html">About</a></li> 
-								<li class="w3pages"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages <span class="caret"></span></a>
-									<ul class="dropdown-menu">
-										<li><a href="icons.html">Web Icons</a></li>
-										<li><a href="codes.html">Short Codes</a></li>     
-									</ul>
-								</li>  
-								<li><a href="contact.html">Contact Us</a></li>
-							</ul>
-						</div>
-						<div class="cart cart box_1"> 
-							<form action="#" method="post" class="last"> 
-								<input type="hidden" name="cmd" value="_cart" />
-								<input type="hidden" name="display" value="1" />
-								<button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-							</form>   
-						</div> 
-					</nav>
-				</div>
-			</div>
-			<!-- //navigation --> 
-		</div>
-		<!-- //header-end --> 
-		<!-- banner-text -->
-		<div class="banner-text">	
-			<div class="container">
-				<h2>카테고리 요기 <br> <span>Best Chefs For you.</span></h2>
-				<div class="agileits_search">
-					<form action="#" method="post">
-						<input name="Search" type="text" placeholder="Enter Your Area Name" required="">
-						<select id="agileinfo_search" name="agileinfo_search" required="">
-							<option value="">Popular Cities</option>
-							<option value="navs">New York</option>
-							<option value="quotes">Los Angeles</option>
-							<option value="videos">Chicago</option>
-							<option value="news">Phoenix</option>
-							<option value="notices">Fort Worth</option>
-							<option value="all">Other</option>
-						</select>
-						<input type="submit" value="Search">
-					</form>
-				</div> 
-			</div>
-		</div>
-	</div>
-	<!-- //banner -->   
+<jsp:include page="./Header.jsp"></jsp:include>  
 	<!-- add-products -->
-	<div class="add-products">  
+	 <div class="add-products">  
 		<div class="container">
 			<div class="add-products-row">
 				<div class="w3ls-add-grids">
@@ -178,98 +48,8 @@
 			</div>  	 
 		</div>
 	</div>
-	<!-- //add-products --> 
-	<!-- order -->   	
-	<div class="wthree-order">  
-		<img src="images/i2.jpg" class="w3order-img" alt=""/>
-		<div class="container">
-			<h3 class="w3ls-title">How To Order Online Food</h3>
-			<p class="w3lsorder-text">Get your favourite food in 4 simple steps.</p>
-			<div class="order-agileinfo">  
-				<div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-					<div class="order-w3text"> 
-						<i class="fa fa-map" aria-hidden="true"></i> 
-						<h5>Search Area</h5>
-						<span>1</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-					<div class="order-w3text"> 
-						<i class="fa fa-cutlery" aria-hidden="true"></i> 
-						<h5>Choose Food</h5>
-						<span>2</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-					<div class="order-w3text"> 
-						<i class="fa fa-credit-card" aria-hidden="true"></i>
-						<h5>Pay Money</h5>
-						<span>3</span>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-3 col-xs-6 order-w3lsgrids"> 
-					<div class="order-w3text"> 
-						<i class="fa fa-truck" aria-hidden="true"></i>
-						<h5>Enjoy Food</h5>
-						<span>4</span>
-					</div>
-				</div>
-				<div class="clearfix"> </div> 
-			</div>
-		</div>
-	</div>
-	<!-- //order -->    
-	<!-- deals -->
-	<div class="w3agile-deals">
-		<div class="container">
-			<h3 class="w3ls-title">Special Services</h3>
-			<div class="dealsrow">
-				<div class="col-md-6 col-sm-6 deals-grids">
-					<div class="deals-left">
-						<i class="fa fa-truck" aria-hidden="true"></i>
-					</div> 
-					<div class="deals-right">
-						<h4>FREE DELIVERY</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-					</div> 
-					<div class="clearfix"> </div>
-				</div> 
-				<div class="col-md-6 col-sm-6 deals-grids">
-					<div class="deals-left">
-						<i class="fa fa-birthday-cake" aria-hidden="true"></i>
-					</div> 
-					<div class="deals-right">
-						<h4>Party Orders</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-					</div> 
-					<div class="clearfix"> </div>
-				</div>
-				<div class="col-md-6 col-sm-6 deals-grids">
-					<div class="deals-left">
-						<i class="fa fa-users" aria-hidden="true"></i>
-					</div> 
-					<div class="deals-right">
-						<h4>Team up Scheme</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-					</div>
-					<div class="clearfix"> </div>
-				</div> 
-				<div class="col-md-6 col-sm-6 deals-grids">
-					<div class="deals-left">
-						<i class="fa fa-building" aria-hidden="true"></i>
-					</div> 
-					<div class="deals-right">
-						<h4>corporate orders</h4>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tempus justo ac </p>
-					</div>
-					<div class="clearfix"> </div>
-				</div> 
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
-	<!-- //deals --> 
-	<!-- dishes -->
+ 	
+
 	<div class="w3agile-spldishes">
 		<div class="container">
 			<h3 class="w3ls-title">Special Foods</h3>
@@ -282,56 +62,56 @@
 					<!-- Owl-Carousel -->
 					<div id="owl-demo" class="owl-carousel text-center agileinfo-gallery-row">
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g1.jpg" title="Our latest gallery" alt=""/>
+							<img class="lazyOwl" src="resources/images/g1.jpg" title="Our latest gallery" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
 							</div>
 						</a>
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g2.jpg" title="Our latest gallery" alt=""/>
+							<img class="lazyOwl" src="resources/images/g2.jpg" title="Our latest gallery" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
 							</div>
 						</a>
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g3.jpg" title="Our latest gallery" alt=""/>
+							<img class="lazyOwl" src="resources/images/g3.jpg" title="Our latest gallery" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
 							</div>
 						</a>
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g4.jpg" title="Our latest gallery" alt=""/>
+							<img class="lazyOwl" src="resources/images/g4.jpg" title="Our latest gallery" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
 							</div>
 						</a>
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g5.jpg" alt=""/>
+							<img class="lazyOwl" src="resources/images/g5.jpg" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
 							</div>
 						</a> 
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g1.jpg" title="Our latest gallery" alt=""/>
+							<img class="lazyOwl" src="resources/images/g1.jpg" title="Our latest gallery" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
 							</div>
 						</a>
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g2.jpg" title="Our latest gallery" alt=""/>
+							<img class="lazyOwl" src="resources/images/g2.jpg" title="Our latest gallery" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
 							</div>
 						</a>
 						<a href="products.html" class="item g1">
-							<img class="lazyOwl" src="images/g3.jpg" title="Our latest gallery" alt=""/>
+							<img class="lazyOwl" src="resources/images/g3.jpg" title="Our latest gallery" alt=""/>
 							<div class="agile-dish-caption">
 								<h4>Duis congue</h4>
 								<span>Neque porro quisquam est qui dolorem </span>
@@ -345,7 +125,7 @@
 	</div>
 	<!-- //dishes --> 
 	<!-- subscribe -->
-	<div class="subscribe agileits-w3layouts"> 
+<!-- 	<div class="subscribe agileits-w3layouts"> 
 		<div class="container">
 			<div class="col-md-6 social-icons w3-agile-icons">
 				<h4>Keep in touch</h4>  
@@ -370,14 +150,14 @@
 					<input type="submit" value="Subscribe">
 					<div class="clearfix"> </div> 
 				</form>  
-				<img src="images/i1.png" class="sub-w3lsimg" alt=""/>
+				<img src="resources/images/i1.png" class="sub-w3lsimg" alt=""/>
 			</div>
 			<div class="clearfix"> </div> 
 		</div>
-	</div>
+	</div> -->
 	<!-- //subscribe --> 
 	<!-- footer -->
-	<div class="footer agileits-w3layouts">
+	<!-- <div class="footer agileits-w3layouts">
 		<div class="container">
 			<div class="w3_footer_grids">
 				<div class="col-xs-6 col-sm-3 footer-grids w3-agileits">
@@ -404,6 +184,9 @@
 						<li><a href="terms.html">Terms & Conditions</a></li>  
 						<li><a href="privacy.html">Privacy Policy</a></li>
 						<li><a href="login.html">Return Policy</a></li> 
+													<li class="head-dpdn">
+								<a href="./storejoin.sto"><i class="fa fa-user-plus" aria-hidden="true"></i> 사장님 사이트</a>
+							</li> 
 					</ul>   
 				</div>
 				<div class="col-xs-6 col-sm-3 footer-grids w3-agileits">
@@ -418,10 +201,10 @@
 				<div class="clearfix"> </div>
 			</div>
 		</div> 
-	</div>
+	</div> -->
 	<div class="copyw3-agile"> 
 		<div class="container">
-			<p>&copy; 2017 Staple Food. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+			<p> 우승헌 &nbsp; 서대원  &nbsp;정하늘 &nbsp; 이지은  &nbsp;김선희 </p>
 		</div>
 	</div>
 

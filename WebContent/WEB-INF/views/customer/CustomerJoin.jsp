@@ -27,34 +27,26 @@
 <script type="text/javascript">
 
 function duplCheck() {	
-	var m_id = $('#customerInfoId').val();
-	if(m_id == "" || m_id == null) {
-		alert("아이디를 입력하세요");
+	var customerInfoId = $('#customerInfoId').val();
+	if(customerInfoId == "" || customerInfoId == null) {
 		return;
 	} else {
-		var idExp = /^[a-z0-9]{4,}@[a-z0-9]{3,}\.[a-z]{2,4}$/;
-		if (!idExp.test(m_id)){
-			$('#m_id').val("");
-			$('#m_id').focus();
-			$('#idCheckMsg').html('올바른 이메일 형식이 아닙니다.').css('color', 'red');
-            return false;
-		} else {
 		 $.ajax({ 
                 type : 'post',
                 url  : 'DuplCheck.cus',
-                data : { m_id : m_id },
+                data : { customerInfoId : customerInfoId },
                 success : function(result) {
-                	if (result == '1'){
-                		$('#idCheckMsg').html('이미 존재하는 아이디 입니다.').css('color', 'red');
+                	if (result == '0'){
+                		$('#duplCheckMsg').html('사용할 수 있는 아이디 입니다.').css('color', 'blue');
                 	} else {
-                		$('#idCheckMsg').html('사용할 수 있는 아이디 입니다.').css('color', 'blue');
+                		$('#duplCheckMsg').html('이미 존재하는 아이디 입니다.').css('color', 'red');
                 	}
                 },
                 error : function() { alert('시스템 문제발생'); }
            }); 
 		}
 	}
-}
+
 
 
 function pwdCheck() {
@@ -185,7 +177,7 @@ function pwdCheck() {
 			<div class="login-agileinfo"> 
 				<form method="post" action="./write.cus">
 					
-					<input class="agile-ltext" type="text" name="customerInfoId" placeholder="ID를 입력해주세요." required="required" onkeyup="duplCheck();">
+					<input class="agile-ltext" type="text" id="customerInfoId" name="customerInfoId" placeholder="ID를 입력해주세요." required="required" onkeyup="duplCheck();">
 					<div id="duplCheckMsg"></div>
 					<input class="agile-ltext" type="password" id="customerInfoPassword" name="customerInfoPassword" placeholder="비밀번호를 입력해주세요." required="required" onkeyup="pwdCheck();">
 					<input class="agile-ltext" type="password" id="confirmPassword" name="confirmPassword" placeholder="비밀번호를 다시 입력해주세요." required="required" onkeyup="pwdCheck();">

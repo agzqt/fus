@@ -4,7 +4,7 @@ import javax.annotation.Resource;
 
 import org.apache.ibatis.session.SqlSession;
 
-@Resource
+
 public class CustomerReviewDaoImpl  implements CustomerReviewDao {
 	private SqlSession sqlSession;
 	

@@ -14,6 +14,11 @@
 <link href="./resources/css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
 <link href="./resources/css/style.css" type="text/css" rel="stylesheet" media="all">  
 <link href="./resources/css/font-awesome.css" rel="stylesheet"> <!-- font-awesome icons --> 
+<!-- 타임피커 -->
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript" ></script>
+<script src=" https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js" type="text/javascript" ></script>
+<script language="JavaScript" src="/common/js/jquery-ui-timepicker-addon.js"></script><!-- 타임피커 -->
 <!-- //Custom Theme files --> 
 <!-- js -->
 <script src="./resources/js/jquery-2.2.3.min.js"></script>  
@@ -60,6 +65,15 @@
             }
         }).open();
     }
+    
+    $('#storeInfoTime').timepicker({
+    	 timeFormat: 'HH:mm',
+    	 showOn: 'button',
+    	 buttonImage: '/common/img/btn_calendar.gif',
+    	 buttonImageOnly: true
+    	});
+
+    	
 </script>
 <!-- //js -->
 <!-- web-fonts -->   
@@ -82,11 +96,10 @@
 					<input class="agile-ltext" type="password" name="Confirm Password" placeholder="비밀번호를 다시 입력해주세요." required="required">
 					<input class="agile-ltext" type="text" name="storeInfoName" placeholder="점포명 입력해주세요." required="required">					
 					
-				<input type="text" id="sample6_postcode" name="storeInfoAddress" placeholder="우편번호">
-<input type="button" onclick="sample6_execDaumPostcode()"  name="storeInfoAddress" value="우편번호 찾기"><br>
-<input type="text" id="sample6_address"  name="storeInfoAddress" placeholder="주소">
-<input type="text" id="sample6_address2"  name="storeInfoAddress" placeholder="상세주소">
-
+					<input type="text" id="sample6_postcode" name="storeInfoAddress" placeholder="우편번호">
+					<input type="button" onclick="sample6_execDaumPostcode()"  name="storeInfoAddress" value="우편번호 찾기"><br>
+					<input type="text" id="sample6_address"  name="storeInfoAddress" placeholder="주소">
+					<input type="text" id="sample6_address2"  name="storeInfoAddress" placeholder="상세주소">
 					<input class="agile-ltext" type="text" name="storeInfoStorePhone" placeholder="점포전화번호를 입력해주세요." required="required">
 					<input class="agile-ltext" type="text" name="storeInfoMobilePhone" placeholder="사장님전화번호를 입력해주세요." required="required">
 					
@@ -101,6 +114,7 @@
 							</div>
 					
 					<input class="agile-ltext" type="text" name="storeInfoLicense" placeholder="사업자번호를 입력해주세요." required="required">	
+					<input type="datetime" name="storeInfoOpen" id="storeInfoTime" value="" size="6" style="text-align:center" placeholder="오픈시간" required="required";">
 					<input class="agile-ltext" type="time" name="storeInfoOpen" placeholder="오픈시간" required="required">
 					<input class="agile-ltext" type="time" name="storeInfoClose" placeholder="마감시간" required="required">
 					<select class="agile-ltext"

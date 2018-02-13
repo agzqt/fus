@@ -8,15 +8,14 @@
 	</select>
 	
 	 <insert id="customerInsertMember" parameterType="CustomerInfoBean">
-		insert into customerinfo values(#{customerInfoNum},#{customerInfoId},#{customerInfoPassword},#{customerInfoName},#{customerInfoPhone},#{customerInfoEmail},#{customerInfoGrade},#{customerInfoCurrentPoint},#{customerInfoTotalPoint},now(),now())
+		insert into customerinfo values(#{customerInfoNum},#{customerInfoId},#{customerInfoPassword},#{customerInfoName},#{customerInfoPhone},#{customerInfoEmail},#{customerInfoGrade},#{customerInfoCurrentPoint},#{customerInfoTotalPoint},now(),now(),#{customerAuthoritles})
  	</insert>
- 	
  	<select id="customerList" resultType="CustomerInfoBean">
 		select * from customerinfo
 	</select>
 	
-	<!-- <select id="selectListDuplCheck" resultType="customerInfoId">
-	SELECT storeInfoId FROM storeinfo=#{storeinfo} UNION ALL SELECT customerInfoId=#{customerInfoId} FROM customerinfo;
-	</select>  -->
+	<select id="selectListDuplCheck" resultType="int">
+	select count(*) from customerinfo where (select count(*) from storeinfo where storeinfoid) or customerinfoid=#{customerinfoid}
+	</select> 
 	
 </mapper>

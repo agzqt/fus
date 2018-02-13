@@ -23,7 +23,7 @@ private SqlSession sqlSession;
 	}
 	
 	@Override
-	public StoreInfoBean login(String StoreInfoId) {
-		return sqlSession.selectOne("storelogin", StoreInfoId);//포스로그인
-	}
+		public StoreInfoBean storeOne(String StoreInfoId) {
+			return sqlSession.selectOne("storeOne", StoreInfoId);
+		}
 }

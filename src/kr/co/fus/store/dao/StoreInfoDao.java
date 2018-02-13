@@ -6,6 +6,6 @@ public interface StoreInfoDao {
 	
 	public void storeInsert(StoreInfoBean bean); // 가입
 	public String storeLoginAction(String storeInfoId); //  로그인
-	public StoreInfoBean login(String StoreInfoId); // pos 로그인
+	public StoreInfoBean storeOne(String StoreInfoID);//store지점한개찾기
 
 }

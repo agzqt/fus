@@ -16,7 +16,7 @@ public class SuperAdminInfoServiceImpl implements SuperAdminInfoService{
 	
 	@Override
 	public void login(HttpSession session, String superid, String superpw, String superpw2) {
-		System.out.println("22222222222222222222222222222");
+		System.out.println("22222222222222222222222222222"+superid+superpw+superpw2);
 		SuperAdminInfoBean loginPass = dao.login(superid);
 		System.out.println(loginPass+"3333333333333333333");
 		String pass1 = loginPass.getAdminInfoPassword();

@@ -1,5 +1,6 @@
 package kr.co.fus.customer.controller;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
 
@@ -13,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import kr.co.fus.customer.bean.CustomerInfoBean;
 import kr.co.fus.customer.service.CustomerInfoService;
@@ -26,7 +28,7 @@ public class CustomerInfoController {
 	@RequestMapping("/loginform.cus")
 	public String loginform(HttpServletRequest request, HttpServletResponse response) {
 		System.out.println("로그인폼");
-		return "CustomerLogin";
+		return "customer/CustomerLogin";
 	}
 	
 	@RequestMapping("/login.cus")
@@ -46,19 +48,19 @@ public class CustomerInfoController {
 	@RequestMapping(value="/CustomerInfoJoin.cus", method=RequestMethod.GET)
 	public String loginjoin() {
 		System.out.println("get 방식 왔나=>" );
-		return "CustomerJoin";
+		return "customer/CustomerJoin";
 	}
 	@RequestMapping(value="/CustomerInfoJoin.cus", method=RequestMethod.POST)
 	public String loginjoin(CustomerInfoBean customerInfoBean) {
 		System.out.println("post 왔나=>" );
 		
-			return "CustomerJoin";
+			return "customer/CustomerJoin";
 	}
 
 	@RequestMapping("/write.cus")
 	public String write(@ModelAttribute CustomerInfoBean customerInfoBean) {
 		System.out.println("write=>" );
-		customerInfoService.insertMember(customerInfoBean);
+		customerInfoService.customerInsertMember(customerInfoBean);
 
 		return "redirect:/index.cus";
 	}
@@ -69,24 +71,31 @@ public class CustomerInfoController {
 		List<CustomerInfoBean> list = customerInfoService.customerGetList(customerInfoBean);
 		model.addAttribute("list", list);
 		
-		return "CustomerLogin";
+		return "customer/CustomerLogin";
 	}
 
-	/*@RequestMapping("/DuplCheck.cus")
-	public String DuplCheck(@RequestParam("customerInfoId") String customerInfoId) {
-		System.out.println("@RequestParam컨트롤러=>" );
-	
+	@RequestMapping("/DuplCheck.cus")
+	public String DuplCheck(@RequestParam("customerInfoId") String customerInfoId,HttpServletRequest request, HttpServletResponse res)  {
+		System.out.println("@RequestParam컨트롤러=>"+customerInfoId );
+		res.setContentType("text/html; charset=UTF=8");
 		int result = customerInfoService.duplCheck(customerInfoId);
+		System.out.println(result);
 		if(result == 0) {
-			System.out.println("dddddddddd왕냐안아아");
+			System.out.println("값 0왕냐안아아");
+		} else {
+			System.out.println("값 0 아냐 냐안아아");
 		}
-		
-		return "CustomerLogin";
-	}*/
+		try {
+			res.getWriter().write(result + "");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 	
 	@RequestMapping(value = "/index.cus", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		return "../CustomerIndex";
+		return "CustomerIndex";
 	}
 	
 }

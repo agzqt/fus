@@ -12,28 +12,28 @@ import kr.co.fus.superadmin.service.SuperAdminInfoService;
 
 @Controller
 public class SuperAdminLoginController {
-
+	
 	@Autowired
 	private SuperAdminInfoService superAdminInfoService;
-
+	
 	@RequestMapping("/index.super")
 	protected String main(HttpServletRequest request, HttpServletResponse response) {
 		
-		return "superIndex";
+		return "superadmin/superIndex";
 	}
 	
 	@RequestMapping("/loginform.super")
 	protected String loginform(HttpServletRequest request, HttpServletResponse response) {
-		
-		return "superLogin";
+		System.out.println("11");
+		return "superadmin/superLogin";
 	}
 	
 	@RequestMapping("/login.super")
 	public String login(HttpSession session, String superid, String superpw, String superpw2) {
-		System.out.println(session+"--"+superid+"--"+superpw+"--"+superpw2);
-		System.out.println("111111111111111111111111111111");
+		
 		superAdminInfoService.login(session, superid, superpw, superpw2);
-		return "superIndex";
+		System.out.println("111111111111111111111111111111");
+		return "superadmin/superIndex";
 	}
 	
 	@RequestMapping("/logout.super")

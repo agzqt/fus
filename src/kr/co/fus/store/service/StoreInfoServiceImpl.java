@@ -23,31 +23,18 @@ public class StoreInfoServiceImpl implements StoreInfoService {
 		System.out.println("22222222222222222222222222222");
 		String loginPass = dao.storeLoginAction(storeInfoId);
 		if (loginPass != null) {
-			
 			if (loginPass.equals(storeInfoPassword)) {
 				session.setAttribute("id", storeInfoId);
 				System.out.println("성공");
 			} else {
 				return;
 			}
-			}
+		} 
 	}
 	
-	//포스로그인
 	@Override
-	public void login(HttpSession session, String StoreInfoId, String StoreInfoPassword) {
-		System.out.println("22222222222222222222222222222");
-		StoreInfoBean loginPass = dao.login(StoreInfoId);
-		System.out.println("3333333333");
-		String pass = loginPass.getStoreInfoPassword();
-		if (loginPass != null) {
-			
-			if (pass.equals(StoreInfoPassword)) {
-				session.setAttribute("id", StoreInfoId);
-				System.out.println("성공");
-			} else {
-				return;
-			}
-			}
+	public StoreInfoBean storeOne(String StoreInfoId) {
+		return dao.storeOne(StoreInfoId);
+		
 	}
 }

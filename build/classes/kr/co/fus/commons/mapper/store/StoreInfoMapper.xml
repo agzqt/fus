@@ -24,7 +24,12 @@
 		select storeInfoPassword from storeInfo where storeInfoId = #{storeInfoId}
 	</select>
 	
-	<select id="storelogin" resultType="StoreInfoBean">
-		select storeinfopassword from storeinfo where StoreInfoId = #{StoreInfoId}
+	<select id ="storeOne" resultType="StoreInfoBean">
+		select * from storeinfo where storeinfoid=#{storeInfoId}
 	</select>
+	
+	<select id="storeReserve" resultType="CustomerReserveBean">
+		select customerreservepersonnal, customerreservedate, customerreservetime, 
+		customerreservememo from customerreserve where customerreservecode = #{customerreservecode}</select>
+		 
 </mapper>

@@ -8,7 +8,6 @@ import org.apache.ibatis.session.SqlSession;
 
 import kr.co.fus.customer.bean.CustomerInfoBean;
 
-@Resource
 public class CustomerInfoDaoImpl implements CustomerInfoDao {
 	private SqlSession sqlSession;
 	

@@ -9,7 +9,7 @@
 <body>
 customer 리뷰 등록 후 의 건 가져오기
 <div align="center">
-		<h1>사장님지난예약내역</h1>
+		<h1>리뷰</h1>
 		<form method="post" action="storeview.sto">
 		
 		

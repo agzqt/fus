@@ -9,7 +9,7 @@ import kr.co.fus.customer.bean.CustomerInfoBean;
 public interface CustomerInfoService {
 	public void login(HttpSession session, String cusid, String cuspw);
 	
-	public void insertMember(CustomerInfoBean customerInfoBean); //  회원가입
+	public void customerInsertMember(CustomerInfoBean customerInfoBean); //  회원가입
 	
 	public int duplCheck(String customerInfoId); //회원가입 id 중복체크
 

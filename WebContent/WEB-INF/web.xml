@@ -13,6 +13,10 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			/WEB-INF/spring/root-context.xml
+			/WEB-INF/spring/appServlet/customerServlet-context.xml
+			/WEB-INF/spring/appServlet/storeServlet-context.xml
+			/WEB-INF/spring/appServlet/posServlet-context.xml
+			/WEB-INF/spring/appServlet/superAdminServlet-context.xml
 			<!-- /WEB-INF/spring/admin-security.xml -->
 			<!-- /WEB-INF/spring/customer-security.xml -->
 		</param-value>
@@ -25,52 +29,21 @@
 
 	<!-- Processes application requests -->
 	<servlet>
-		<servlet-name>customerServlet</servlet-name>
+		<servlet-name>fusServlet</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/customerServlet-context.xml</param-value>
+			<param-value>
+			/WEB-INF/spring/appServlet/servlet-context.xml
+			</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>customerServlet</servlet-name>
+		<servlet-name>fusServlet</servlet-name>
 		<url-pattern>*.cus</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>storeServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/storeServlet-context.xml</param-value>
-		</init-param>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>storeServlet</servlet-name>
 		<url-pattern>*.sto</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>posServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/posServlet-context.xml</param-value>
-		</init-param>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>posServlet</servlet-name>
 		<url-pattern>*.pos</url-pattern>
-	</servlet-mapping>
-	<servlet>
-		<servlet-name>superAdminServlet</servlet-name>
-		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-		<init-param>
-			<param-name>contextConfigLocation</param-name>
-			<param-value>/WEB-INF/spring/appServlet/superAdminServlet-context.xml</param-value>
-		</init-param>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>superAdminServlet</servlet-name>
 		<url-pattern>*.super</url-pattern>
 	</servlet-mapping>
 

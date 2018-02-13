@@ -87,21 +87,73 @@ footer {
 
 	<div class="container-fluid text-center">
 		<div class="row content">
-			<div class="col-sm-10 text-left">
-			
-<table width=100% height=100% border="1">
-<tr><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th></tr>
-<tr><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th></tr>
-<tr><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th></tr>
-<tr><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th></tr>
-<tr><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th><th>테이블</th></tr>
-</table>
+			<div class="col-sm-9 text-left">
+
+				<table width=100% height=100% border="1">
+					<tr>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+					</tr>
+					<tr>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+					</tr>
+					<tr>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+					</tr>
+					<tr>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+					</tr>
+					<tr>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+					</tr>
+				</table>
 			</div>
-			<div class="col-sm-2 sidenav">
-			날짜 및 시간 나오게 하긩
+			<div class="col-sm-3 sidenav">
+				날짜 및 시간 나오게 하긩
 				<div class="well">
+				<table width=100% height=100% border="1">
+				<tr>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+						<th>테이블</th>
+					</tr>
+					</table>
 					<p>오늘 예약</p>
-					<p>${test}</p>
+					<c:forEach items="${reserveList}" var="bean">
+	${bean.customerReserveNum}
+	${bean.customerReserveCustomerNum}
+	${bean.customerReservePersonnal}
+	${bean.customerReserveTime}
+	${bean.customerReserveMemo}
+	<br>
+					</c:forEach>
 				</div>
 				<div class="well">
 					<p>내일 예약</p>

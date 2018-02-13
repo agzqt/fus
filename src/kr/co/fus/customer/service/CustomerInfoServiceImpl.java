@@ -9,9 +9,8 @@ import org.springframework.stereotype.Service;
 import kr.co.fus.customer.bean.CustomerInfoBean;
 import kr.co.fus.customer.dao.CustomerInfoDao;
 
-@Service
+
 public class CustomerInfoServiceImpl implements CustomerInfoService{
-	
 	
 	private CustomerInfoDao dao;
 	public void setCustomerInfoDao(CustomerInfoDao customerInfoDao) {
@@ -33,7 +32,7 @@ public class CustomerInfoServiceImpl implements CustomerInfoService{
 	}
 	
 	@Override
-	public void insertMember(CustomerInfoBean customerInfoBean) {
+	public void customerInsertMember(CustomerInfoBean customerInfoBean) {
 
 		dao.insertMember(customerInfoBean);
 	}

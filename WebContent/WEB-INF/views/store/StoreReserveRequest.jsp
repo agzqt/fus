@@ -8,6 +8,5 @@
 </head>
 <body>
 하늘오빠 예약내역가져오기
-<%-- <jsp:include page=  > --%>
 </body>
 </html>
